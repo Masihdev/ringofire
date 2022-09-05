@@ -1,0 +1,81 @@
+.play-cards-bg {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url('../../assets/img/board.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+        width: 180px;
+        height: auto;
+        position: absolute;
+    }
+}
+
+.top-card {
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    &:hover {
+        transform: scale(1.1) translateY(-20px);
+    }
+}
+
+.played-cards {
+    right: 50px;
+    transform: scale(1.1) translateX(300px) translateY(-150px) rotate(-10deg);
+}
+
+.pick-card {
+    animation: pick-card-animation 1s ease-in-out;
+    transform: scale(1.1) translateX(300px) translateY(-150px) rotate(-10deg);
+}
+
+@keyframes pick-card-animation {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.5);
+    }
+    60% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.1) translateX(300px) translateY(-150px) rotate(-10deg);
+    }
+}
+
+.player-position {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    bottom: 120px;
+    overflow-y: auto;
+}
+
+.player-position::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-add {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+.description-bottom {
+    position: absolute;
+    bottom: 32px;
+    left: 100px;
+    right: 100px;
+}
