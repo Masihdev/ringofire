@@ -1,29 +1,53 @@
 .start-screen {
     background-color: #404040;
     height: 100vh;
-    width: vw;
+    max-width: 100%;
+    width: 100vw;
     max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     img {
         height: 100vh;
+        width: 100vw;
+        max-width: 100%;
     }
 }
 
-.start-label {
+.start-btn {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 100px;
     left: 0;
     right: 0;
+    bottom: 0;
     img {
-        width: 30vw;
+        width: 200px;
         height: auto;
+        object-fit: contain;
+        cursor: pointer;
+        margin-bottom: 32px;
         &:hover {
-            cursor: pointer;
-            filter: brightness(1.25);
+            filter: brightness(2);
+            transition: all ease-in-out 225ms;
         }
     }
 }
+
+// .start-label {
+//     display: flex;
+//     justify-content: center;
+//     position: absolute;
+//     bottom: 100px;
+//     left: 0;
+//     right: 0;
+//     img {
+//         width: 30vw;
+//         height: auto;
+//         &:hover {
+//             cursor: pointer;
+//             filter: brightness(1.25);
+//         }
+//     }
+// }
