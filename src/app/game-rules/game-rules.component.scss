@@ -1,0 +1,14 @@
+@media(max-width: 620px) {
+    mat-card-title {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 480px) {
+    mat-card-title {
+        font-size: 18px;
+    }
+    mat-card-content {
+        font-size: 12px;
+    }
+}
