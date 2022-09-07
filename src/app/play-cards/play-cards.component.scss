@@ -62,6 +62,7 @@
     bottom: 150px;
     overflow-y: auto;
     // background-color: red;
+    z-index: 1;
 }
 
 .player-position::-webkit-scrollbar {

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { Game } from 'src/models/game';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 
 @Component({
   selector: 'app-start-screen',
@@ -9,7 +12,7 @@ import { Route, Router } from '@angular/router';
 export class StartScreenComponent implements OnInit {
 
   // private router for forwarding to the play-cards component when clicking on start game
-  constructor(private router: Router) { }
+  constructor(private firestore: AngularFirestore, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -17,6 +20,16 @@ export class StartScreenComponent implements OnInit {
 
 
   playCards() {
+  let game = new Game();
+  this
+  .firestore
+  .collection('games')
+  .add(game.toJson())
+  .then( (gameInfo:any) => {
+    this.router.navigateByUrl('/play-cards/' + gameInfo.id);
+    console.log(gameInfo);
+    
+  });
     this.router.navigateByUrl('/play-cards');
   }
 

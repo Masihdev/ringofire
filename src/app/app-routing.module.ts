@@ -5,7 +5,7 @@ import { StartScreenComponent } from './start-screen/start-screen.component';
 
 const routes: Routes = [
   { path: '', component: StartScreenComponent },
-  { path: 'play-cards', component: PlayCardsComponent }
+  { path: 'play-cards/:id', component: PlayCardsComponent }
 
 
 ];

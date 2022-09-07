@@ -3,6 +3,9 @@ export class Game {
     public unplayedCards: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
+    public pickCardAnimation = false;
+    public currentCard: string = '';
+
 
     constructor() {
         for (let i = 1; i <= 13; i++) {
@@ -12,6 +15,17 @@ export class Game {
             this.unplayedCards.push('clubs_' + i);
         }
         shuffle(this.unplayedCards);
+    }
+
+    public toJson() {
+        return {
+            players: this.players,
+            unplayedCards: this.unplayedCards,
+            playedCards: this.playedCards,
+            currentPlayer: this.currentPlayer,
+            pickCardAnimation: this.pickCardAnimation,
+            currentCard: this.currentCard
+        };
     }
 
 }
