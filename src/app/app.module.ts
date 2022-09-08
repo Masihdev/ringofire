@@ -21,6 +21,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
+import { ProfilePicsComponent } from './profile-pics/profile-pics.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     PlayCardsComponent,
     PlayersComponent,
     DialogAddPlayerComponent,
-    GameRulesComponent
+    GameRulesComponent,
+    ProfilePicsComponent
   ],
   imports: [
     BrowserModule,

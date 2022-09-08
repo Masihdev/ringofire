@@ -1,5 +1,5 @@
 <div class="player-position">
-    <app-players [playeractive]="i == game.currentPlayer" *ngFor="let player of game.players; let i= index;" [name]="player"></app-players>
+    <app-players [profilePic]="game.playerPics[i]" (click)="editPlayer(i)" [playeractive]="i == game.currentPlayer" *ngFor="let player of game.players; let i= index;" [name]="player"></app-players>
 </div>
 
 <div class="play-cards-bg">

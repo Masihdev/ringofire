@@ -1,5 +1,6 @@
 export class Game {
     public players: string[] = [];
+    public playerPics: string[] = [];
     public unplayedCards: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
@@ -20,6 +21,7 @@ export class Game {
     public toJson() {
         return {
             players: this.players,
+            playerPics: this.playerPics,
             unplayedCards: this.unplayedCards,
             playedCards: this.playedCards,
             currentPlayer: this.currentPlayer,
