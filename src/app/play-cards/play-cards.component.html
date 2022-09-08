@@ -4,6 +4,7 @@
 
 <div *ngIf="gameOver" class="game-over">
     <img src="./assets/img/game-over.jpg" alt="">
+    <img (click)="restart()" class="restart" src="./assets/img/restart.png" alt="">
 </div>
 
 <div *ngIf="!gameOver" class="play-cards-bg">
@@ -24,4 +25,7 @@
 
 <button *ngIf="!gameOver" mat-fab color="primary" class="btn-add" (click)="openDialog()">
     <mat-icon>add</mat-icon>
-  </button>
+</button>
+
+<!-- cards are preloaded to prevent preview delays while being picked -->
+<img class="preloadPics" src="./assets/img/cards/{{ game.unplayedCards[game.unplayedCards.length -1] }}.png" alt="">

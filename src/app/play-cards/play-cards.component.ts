@@ -108,6 +108,10 @@ newGame() {
     }
     });
   }
+
+  restart() {
+    window.location.reload();
+  }
 }
 
 
