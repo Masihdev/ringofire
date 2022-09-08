@@ -9,11 +9,13 @@ export class Game {
 
 
     constructor() {
-        for (let i = 1; i <= 13; i++) {
+        // for (let i = 1; i <= 13; i++) {
+            for (let i = 1; i <= 3; i++) {
+
             this.unplayedCards.push('spade_' + i);
-            this.unplayedCards.push('hearts_' + i);
-            this.unplayedCards.push('diamonds_' + i);
-            this.unplayedCards.push('clubs_' + i);
+            // this.unplayedCards.push('hearts_' + i);
+            // this.unplayedCards.push('diamonds_' + i);
+            // this.unplayedCards.push('clubs_' + i);
         }
         shuffle(this.unplayedCards);
     }

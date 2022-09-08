@@ -2,7 +2,11 @@
     <app-players [profilePic]="game.playerPics[i]" (click)="editPlayer(i)" [playeractive]="i == game.currentPlayer" *ngFor="let player of game.players; let i= index;" [name]="player"></app-players>
 </div>
 
-<div class="play-cards-bg">
+<div *ngIf="gameOver" class="game-over">
+    <img src="./assets/img/game-over.jpg" alt="">
+</div>
+
+<div *ngIf="!gameOver" class="play-cards-bg">
     <div class="cards-container">
         <!-- unplayed cards -->
         <img *ngFor="let card of cards; let i = index;" [ngStyle]="{'right.px': i * 10}" src="./assets/img/cards/yellow_back.png" alt="">
@@ -16,8 +20,8 @@
     </div>
 </div>
 
-<app-game-rules [card]="game.currentCard" class="description-bottom"></app-game-rules>
+<app-game-rules *ngIf="!gameOver" [card]="game.currentCard" class="description-bottom"></app-game-rules>
 
-<button mat-fab color="primary" class="btn-add" (click)="openDialog()">
+<button *ngIf="!gameOver" mat-fab color="primary" class="btn-add" (click)="openDialog()">
     <mat-icon>add</mat-icon>
   </button>

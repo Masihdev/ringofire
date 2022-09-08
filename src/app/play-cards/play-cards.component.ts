@@ -17,7 +17,7 @@ export class PlayCardsComponent implements OnInit {
 cards = [0, 1, 2, 3, 4];
 game: Game; // variable vom Typ Game
 gameId: string;
-
+gameOver = false;
 
 
   constructor(private route: ActivatedRoute, private firestore: AngularFirestore, public dialog: MatDialog) { }
@@ -56,7 +56,9 @@ newGame() {
 
 
   takeCard() {
-   if(!this.game.pickCardAnimation) {
+    if(this.game.unplayedCards.length == 0) {
+      this.gameOver = true;
+    } else if(!this.game.pickCardAnimation) {
     this.game.currentCard = this.game.unplayedCards.pop(); // pop() gives the last value from array and removes it
     this.game.pickCardAnimation = true;
     this.game.currentPlayer++;
