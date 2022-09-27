@@ -61,7 +61,6 @@
     top: 50px;
     bottom: 150px;
     overflow-y: auto;
-    // background-color: red;
     z-index: 1;
     app-players {
         cursor: pointer;
@@ -119,13 +118,9 @@
     height: 0px;
 }
 
-@media(max-width: 1215px) {
-    .player-position {
-        // background-color: blue;
-    }
+@media(max-width: 1230px) {
     .cards-container {
         img {
-            // background-color: red;
             width: 150px;
         }
         .played-cards {
@@ -152,21 +147,18 @@
     }
 }
 
-@media(max-width: 890px) {
-    .player-position {
-        // background-color: blue;
-    }
+@media(max-width: 930px) {
     .cards-container {
         img {
-            // background-color: red;
+            margin-right: -110px;
             width: 100px;
         }
         .played-cards {
-            transform: scale(1.1) translateX(20px) translateY(-200px) rotate(-10deg);
+            transform: scale(1.1) translateX(-120px) translateY(-80px) rotate(-10deg);
         }
         .pick-card {
             animation: pick-card-animation 1s ease-in-out;
-            transform: scale(1.1) translateX(20px) translateY(-200px) rotate(-10deg);
+            transform: scale(1.1) translateX(-120px) translateY(-80px) rotate(-10deg);
         }
         @keyframes pick-card-animation {
             0% {
@@ -179,13 +171,13 @@
                 transform: scale(1.5);
             }
             100% {
-                transform: scale(1.1) translateX(20px) translateY(-200px) rotate(-10deg);
+                transform: scale(1.1) translateX(-120px) translateY(-80px) rotate(-10deg);
             }
         }
     }
 }
 
-@media(max-width: 690px) {
+@media(max-width: 750px) {
     .description-bottom {
         bottom: 32px;
         left: 10px;
